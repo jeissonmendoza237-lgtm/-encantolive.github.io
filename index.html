@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Encanto Live | Webcam studio in Bogotá</title>
+<meta name="description" content="Encanto Live: training, materials, room rental and equipment for independent webcamers in Bogotá D.C., Colombia.">
+<meta name="theme-color" content="#f7a8c4">
+<style>
+  :root{
+    --rosa:#f48fb1; --rosa-claro:#fde4ec; --rosa-oscuro:#c2185b;
+    --crema:#fff8f5; --texto:#4a2c3a; --suave:#8a6676;
+    --neon:0 0 6px #fff,0 0 14px #ff5fa2,0 0 28px #ff5fa2,0 0 46px #ff2d87;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--texto);background:var(--crema);line-height:1.6}
+  a{color:inherit}
+  .wrap{max-width:1050px;margin:0 auto;padding:0 20px}
+
+  header{position:sticky;top:0;z-index:10;background:rgba(255,248,245,.95);backdrop-filter:blur(6px);border-bottom:1px solid #f3d3de}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px;max-width:1050px;margin:0 auto;flex-wrap:wrap}
+  .logo{font-family:"Brush Script MT","Segoe Script","Snell Roundhand",cursive;font-size:1.9rem;color:var(--rosa-oscuro);text-decoration:none}
+  nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap;font-size:.95rem}
+  nav a{text-decoration:none;color:var(--suave)}
+  nav a:hover{color:var(--rosa-oscuro)}
+  .lang{border:1px solid var(--rosa);background:#fff;color:var(--rosa-oscuro);padding:5px 12px;border-radius:20px;cursor:pointer;font-weight:600}
+
+  .hero{position:relative;min-height:78vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;
+    background:linear-gradient(rgba(60,20,40,.55),rgba(60,20,40,.55)),url("hero.jpg") center/cover no-repeat,
+    linear-gradient(135deg,#f9b7cf,#e68ab0 60%,#c76b94)}
+  .hero h1{font-family:"Brush Script MT","Segoe Script","Snell Roundhand",cursive;font-weight:400;font-size:clamp(3.2rem,11vw,6.5rem);text-shadow:var(--neon);line-height:1.1}
+  .hero p{max-width:620px;margin:16px auto 26px;font-size:1.15rem}
+  .btn{display:inline-block;padding:13px 28px;border-radius:30px;background:var(--rosa-oscuro);color:#fff;text-decoration:none;font-weight:700;border:2px solid var(--rosa-oscuro)}
+  .btn:hover{background:#a3144d}
+  .btn.out{background:transparent;border-color:#fff;margin-left:8px}
+  .btn.out:hover{background:rgba(255,255,255,.2)}
+
+  section{padding:64px 0}
+  section:nth-of-type(even){background:var(--rosa-claro)}
+  h2{font-size:1.9rem;color:var(--rosa-oscuro);margin-bottom:10px;text-align:center}
+  .sub{text-align:center;color:var(--suave);max-width:640px;margin:0 auto 36px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+  .card{background:#fff;border-radius:16px;padding:26px;box-shadow:0 4px 16px rgba(194,24,91,.08);border:1px solid #f6dbe5}
+  .card .ico{font-size:2rem;margin-bottom:8px}
+  .card h3{margin-bottom:6px;color:var(--texto)}
+  .card p{color:var(--suave);font-size:.97rem}
+  .about{max-width:760px;margin:0 auto;text-align:center;font-size:1.05rem}
+
+  .contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:900px;margin:0 auto}
+  .contact .card{text-align:center}
+  .contact a{color:var(--rosa-oscuro);font-weight:700;text-decoration:none;word-break:break-all}
+  .contact a:hover{text-decoration:underline}
+
+  .aviso{margin-top:34px;text-align:center;font-size:.88rem;color:var(--suave)}
+  footer{background:#4a2c3a;color:#f5dbe5;text-align:center;padding:26px 20px;font-size:.9rem}
+  .wa{position:fixed;right:18px;bottom:18px;z-index:20;background:#25d366;color:#fff;text-decoration:none;font-weight:700;padding:13px 20px;border-radius:30px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+  [data-lang]{display:none}
+  html[lang="es"] [data-lang="es"],html[lang="en"] [data-lang="en"]{display:revert}
+  html[lang="es"] span[data-lang="es"],html[lang="en"] span[data-lang="en"]{display:inline}
+  @media(max-width:600px){.btn.out{margin:10px 0 0}nav{gap:12px;font-size:.88rem}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="logo" href="#inicio">Encanto Live</a>
+    <nav>
+      <a href="#servicios"><span data-lang="es">Servicios</span><span data-lang="en">Services</span></a>
+      <a href="#nosotros"><span data-lang="es">Nosotros</span><span data-lang="en">About</span></a>
+      <a href="#contacto"><span data-lang="es">Contacto</span><span data-lang="en">Contact</span></a>
+      <button class="lang" id="langBtn" type="button" aria-label="Cambiar idioma / Change language">ES</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <h1>Encanto Live</h1>
+    <p data-lang="es">Estudio de webcam en Bogotá D.C. Capacitación, material y espacios equipados para webcamers independientes.</p>
+    <p data-lang="en">Webcam studio in Bogotá D.C. Training, materials and fully equipped spaces for independent webcamers.</p>
+    <a class="btn" href="https://wa.me/573204770469" target="_blank" rel="noopener"><span data-lang="es">Escríbenos por WhatsApp</span><span data-lang="en">Message us on WhatsApp</span></a>
+    <a class="btn out" href="#servicios"><span data-lang="es">Ver servicios</span><span data-lang="en">See services</span></a>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <h2><span data-lang="es">Nuestros servicios</span><span data-lang="en">Our services</span></h2>
+    <p class="sub" data-lang="es">Todo lo que necesitas para trabajar de forma profesional e independiente.</p>
+    <p class="sub" data-lang="en">Everything you need to work professionally and independently.</p>
+    <div class="grid">
+      <div class="card"><div class="ico">🎓</div>
+        <h3><span data-lang="es">Capacitaciones</span><span data-lang="en">Training</span></h3>
+        <p data-lang="es">Formación para webcamers independientes: manejo de plataformas, imagen profesional, comunicación y organización de tu trabajo.</p>
+        <p data-lang="en">Training for independent webcamers: platform use, professional image, communication and work organization.</p></div>
+      <div class="card"><div class="ico">🛍️</div>
+        <h3><span data-lang="es">Venta de material</span><span data-lang="en">Materials</span></h3>
+        <p data-lang="es">Material y accesorios para tu trabajo y para mejorar la calidad de tus transmisiones.</p>
+        <p data-lang="en">Materials and accessories for your work and to improve your stream quality.</p></div>
+      <div class="card"><div class="ico">🛋️</div>
+        <h3><span data-lang="es">Alquiler de cuartos</span><span data-lang="en">Room rental</span></h3>
+        <p data-lang="es">Espacios cómodos, ambientados y listos para transmitir, con buena iluminación.</p>
+        <p data-lang="en">Comfortable, styled rooms ready to stream, with good lighting.</p></div>
+      <div class="card"><div class="ico">💻</div>
+        <h3><span data-lang="es">Equipos</span><span data-lang="en">Equipment</span></h3>
+        <p data-lang="es">Equipos disponibles para tu trabajo: cámara, iluminación y más.</p>
+        <p data-lang="en">Equipment available for your work: camera, lighting and more.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros">
+  <div class="wrap">
+    <h2><span data-lang="es">Sobre nosotros</span><span data-lang="en">About us</span></h2>
+    <p class="about" data-lang="es">Encanto Live es un estudio ubicado en Bogotá D.C., Colombia, creado para acompañar a webcamers independientes. Ofrecemos capacitación, venta de material, alquiler de cuartos y equipos, en un ambiente profesional, cómodo y seguro.</p>
+    <p class="about" data-lang="en">Encanto Live is a studio in Bogotá D.C., Colombia, created to support independent webcamers. We offer training, materials, room rental and equipment in a professional, comfortable and safe environment.</p>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <h2><span data-lang="es">Contacto</span><span data-lang="en">Contact</span></h2>
+    <p class="sub" data-lang="es">Escríbenos y te respondemos en nuestro horario de atención.</p>
+    <p class="sub" data-lang="en">Write to us and we will reply during our business hours.</p>
+    <div class="contact">
+      <div class="card"><div class="ico">💬</div><h3>WhatsApp</h3>
+        <p><a href="https://wa.me/573204770469" target="_blank" rel="noopener">+57 320 477 0469</a></p></div>
+      <div class="card"><div class="ico">✉️</div><h3><span data-lang="es">Correo</span><span data-lang="en">Email</span></h3>
+        <p><a href="mailto:encantolive@gmail.com">encantolive@gmail.com</a></p></div>
+      <div class="card"><div class="ico">🕑</div><h3><span data-lang="es">Horario de atención</span><span data-lang="en">Business hours</span></h3>
+        <p>2:00 p. m. – 6:00 p. m.</p></div>
+      <div class="card"><div class="ico">📍</div><h3><span data-lang="es">Ubicación</span><span data-lang="en">Location</span></h3>
+        <p>Bogotá D.C., Colombia</p></div>
+    </div>
+    <p class="aviso" data-lang="es">Nuestros servicios están dirigidos exclusivamente a personas mayores de 18 años.</p>
+    <p class="aviso" data-lang="en">Our services are intended exclusively for people aged 18 or older.</p>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="y">2026</span> Encanto Live · Bogotá D.C., Colombia</footer>
+
+<a class="wa" href="https://wa.me/573204770469" target="_blank" rel="noopener" aria-label="WhatsApp">💬 WhatsApp</a>
+
+<script>
+(function(){
+  var html=document.documentElement,btn=document.getElementById("langBtn");
+  function set(l){
+    html.lang=l;btn.textContent=(l==="es")?"EN":"ES";
+    document.title=(l==="es")?"Encanto Live | Estudio webcam en Bogotá":"Encanto Live | Webcam studio in Bogotá";
+    try{localStorage.setItem("lang",l)}catch(e){}
+  }
+  var saved=null;try{saved=localStorage.getItem("lang")}catch(e){}
+  set(saved==="es"?"es":"en");
+  btn.addEventListener("click",function(){set(html.lang==="es"?"en":"es")});
+  document.getElementById("y").textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
